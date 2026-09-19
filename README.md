@@ -1,17 +1,17 @@
-# techvenda-medallion-databricks
-# Desafio Databricks: Lakehouse com Arquitetura Medallion
+# Projeto Databricks - Lakehouse com Arquitetura Medallion
 
 ![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge&logo=Databricks&logoColor=white)
 ![PySpark](https://img.shields.io/badge/PySpark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)
 ![Delta Lake](https://img.shields.io/badge/Delta_Lake-000000?style=for-the-badge&logo=delta&logoColor=white)
 
-Projeto prático desenvolvido para resolver o desafio de Engenharia de Dados proposto pela comunidade **Comunidados** (`@gonzagadosdados`). O objetivo foi construir um **Lakehouse** ponta a ponta no Databricks Community Edition utilizando a **Arquitetura Medallion** (Bronze, Silver e Gold) e orquestração via **Databricks Workflows**.
+Projeto prático desenvolvido para resolver o desafio de Engenharia de Dados proposto pela comunidade Comunidados ( @gonzagadosdados). O objetivo foi construir um Lakehouse ponta a ponta no Databricks Community Edition utilizando o Arquitetura Medallion (Bronze, Silver e Gold) e orquestração via **Databricks Workflows**.
 
 ---
 
 ## 🏢 Contexto de Negócio
 
-A **TechVenda** é um e-commerce de produtos eletrônicos e móveis que possui dados armazenados em um sistema legado em arquivos CSV. A missão do projeto é estruturar esses dados em uma plataforma moderna para responder a perguntas estratégicas:
+A **TechVenda** é um e-commerce de produtos eletrônicos e móveis que possui dados armazenados em um sistema legado em arquivos CSV. A missão do projeto é estruturar esses dados em uma plataforma moderna para responder a perguntas estratégicas.
+segue perguntas para regra de negocio da empresa:
 
 1. Qual o faturamento total por mês em 2024?
 2. Quais vendedores geraram mais receita?
@@ -22,7 +22,7 @@ A **TechVenda** é um e-commerce de produtos eletrônicos e móveis que possui d
 
 ## 🏗️ Arquitetura do Projeto (Medallion Architecture)
 
-A solução adota o padrão de **Arquitetura Medallion** no Lakehouse para garantir governança, qualidade incremental e desacoplamento no processamento de dados. Cada camada possui responsabilidade única e persiste as informações no formato **Delta Lake**, garantindo suporte a transações ACID, viagens no tempo (*Time Travel*) e alta performance de leitura.
+A solução adota o padrão de **Arquitetura Medallion** no Lakehouse para garantir governança, qualidade incremental e desacoplamento no processamento de dados. Cada camada possui responsabilidade única e persiste as informações no formato **Delta Lake**, garantindo suporte a transações ACID.
 
 
 ```text
@@ -50,7 +50,8 @@ A solução adota o padrão de **Arquitetura Medallion** no Lakehouse para garan
                                         ▼
        ┌─────────────────────────────────────────────────────────────────┐
        │                           CAMADA GOLD                           │
-       │   • Modelagem analítica agregada (Faturamento, Vendedores, Top) │
+       │   • Modelagem analítica agregada (Faturamento, Vendedores, Top, │
+       |    taxa de cancelamento)                                        |
        │   • Aplicação de Window Functions (RANK)                        │
        │   • Tabelas prontas para consumo de BI e tomadores de decisão   │
        └─────────────────────────────────────────────────────────────────┘
@@ -65,7 +66,7 @@ Os dados originais foram carregados no DBFS (`dbfs:/FileStore/desafio/`):
 * `produtos.csv` (20 registros)
 * `vendedores.csv` (8 registros)
 * `pedidos.csv` (200 registros)
-* `itens_pedido.csv` (~509 registros)
+* `itens_pedido.csv` (509 registros)
 
 ---
 
@@ -82,10 +83,7 @@ Os dados originais foram carregados no DBFS (`dbfs:/FileStore/desafio/`):
 * Filtro de registros inativos (removendo `status = 'inativo'` em clientes, produtos e vendedores).
 * Filtro de pedidos cancelados (`status_pedido != 'cancelado'`).
 * Unificação dos dados (Joins entre `pedidos`, `itens_pedido`, `clientes`, `produtos` e `vendedores`).
-* Cálculo da métrica:
-  
-  $$\text{valor\_total\_item} = \text{quantidade} \times \text{preco\_unitario} \times (1 - \text{desconto})$$
-
+* Cálculo da métrica: (valor total dos item, quantidade, preço unitario e desconto)
 * Armazenamento do DataFrame enriquecido em `dbfs:/delta/silver/pedidos_enriquecidos`.
 
 ### 3️⃣ Camada Gold (`03_gold.py`)
@@ -108,7 +106,7 @@ A execução ponta a ponta é automatizada através de um **Databricks Job**:
 
 ---
 
-## imagem Jobs & Pipelines
+## transação Jobs & Pipelines
 Workflow_techvendda
 ![image_1789606781937.png](./image_1789606781937.png "image_1789606781937.png")
 
