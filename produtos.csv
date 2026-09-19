@@ -1,0 +1,21 @@
+id_produto,nome_produto,categoria,preco_unitario,marca,status
+1,Notebook Pro 15,Eletrônicos,3299.9,Dell,ativo
+2,Mouse Wireless,Eletrônicos,89.9,Logitech,ativo
+3,Teclado Mecânico,Eletrônicos,349.9,Redragon,ativo
+4,Monitor 24 FHD,Eletrônicos,1199.9,LG,ativo
+5,Cadeira Gamer,Móveis,799.9,DXRacer,ativo
+6,Headset USB,Eletrônicos,199.9,JBL,ativo
+7,Webcam Full HD,Eletrônicos,249.9,Logitech,ativo
+8,HD Externo 1TB,Armazenamento,329.9,Seagate,ativo
+9,Pen Drive 64GB,Armazenamento,49.9,Sandisk,ativo
+10,Impressora Laser,Eletrônicos,899.9,HP,ativo
+11,Roteador WiFi 6,Rede,429.9,TP-Link,ativo
+12,Tablet 10 pol,Eletrônicos,1599.9,Samsung,ativo
+13,Caixa de Som BT,Eletrônicos,179.9,JBL,ativo
+14,Smart TV 43,Eletrônicos,2199.9,Samsung,inativo
+15,Suporte Monitor,Acessórios,119.9,Multilaser,ativo
+16,Mesa Escritório,Móveis,599.9,Flexiv,ativo
+17,Luminária LED,Acessórios,89.9,Philips,ativo
+18,SSD 500GB,Armazenamento,259.9,Kingston,ativo
+19,Cabo HDMI 3m,Acessórios,29.9,Goeik,ativo
+20,HUB USB-C,Acessórios,149.9,Baseus,ativo

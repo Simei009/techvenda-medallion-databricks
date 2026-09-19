@@ -1,0 +1,26 @@
+id_cliente,nome,email,cidade,estado,data_cadastro,status
+1,Ana Souza,ana.souza@email.com,São Paulo,SP,2022-01-15,ativo
+2,Bruno Lima,bruno.lima@email.com,Rio de Janeiro,RJ,2021-06-20,ativo
+3,Carla Mendes,carla.mendes@email.com,Curitiba,PR,2023-03-10,inativo
+4,Diego Rocha,diego.rocha@email.com,Belo Horizonte,MG,2020-11-05,ativo
+5,Eduarda Ferreira,edu.ferreira@email.com,Porto Alegre,RS,2022-08-22,ativo
+6,Felipe Nunes,felipe.nunes@email.com,Salvador,BA,2021-04-14,ativo
+7,Gabriela Costa,gabi.costa@email.com,Fortaleza,CE,2023-01-30,ativo
+8,Henrique Dias,henrique.dias@email.com,Manaus,AM,2020-07-19,inativo
+9,Isabela Torres,isa.torres@email.com,Recife,PE,2022-12-01,ativo
+10,João Martins,joao.martins@email.com,Goiânia,GO,2021-09-25,ativo
+11,Karen Alves,karen.alves@email.com,São Paulo,SP,2023-05-11,ativo
+12,Lucas Pereira,lucas.pereira@email.com,Rio de Janeiro,RJ,2020-03-08,ativo
+13,Mariana Gomes,mari.gomes@email.com,Curitiba,PR,2022-07-17,inativo
+14,Nicolas Barros,nicolas.barros@email.com,Belo Horizonte,MG,2021-10-29,ativo
+15,Olivia Cardoso,olivia.cardoso@email.com,Porto Alegre,RS,2023-02-14,ativo
+16,Pedro Oliveira,pedro.oli@email.com,São Paulo,SP,2020-05-03,ativo
+17,Queila Ribeiro,queila.r@email.com,Salvador,BA,2022-04-22,ativo
+18,Rafael Santos,rafael.s@email.com,Fortaleza,CE,2021-08-06,ativo
+19,Sara Monteiro,sara.m@email.com,Recife,PE,2023-06-18,ativo
+20,Thiago Nascimento,thiago.n@email.com,Goiânia,GO,2020-12-25,inativo
+21,Ursula Freitas,ursula.f@email.com,São Paulo,SP,2022-10-09,ativo
+22,Victor Moura,victor.m@email.com,Rio de Janeiro,RJ,2021-03-17,ativo
+23,Wanda Leal,wanda.l@email.com,Curitiba,PR,2023-07-04,ativo
+24,Xenia Vaz,xenia.v@email.com,Belo Horizonte,MG,2022-01-28,ativo
+25,Yuri Castro,yuri.c@email.com,Porto Alegre,RS,2020-09-13,inativo
