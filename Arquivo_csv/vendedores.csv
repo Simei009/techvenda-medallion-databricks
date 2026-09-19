@@ -1,0 +1,9 @@
+id_vendedor,nome_vendedor,estado,regiao,salario_base,data_contratacao,status
+1,Marcos Teixeira,SP,Sul,5000.0,2019-03-01,ativo
+2,Fernanda Lima,RJ,Sudeste,4800.0,2020-06-15,ativo
+3,Roberto Alves,MG,Sudeste,4600.0,2018-11-20,ativo
+4,Patrícia Sousa,PR,Sul,4900.0,2021-02-10,ativo
+5,Anderson Silva,BA,Nordeste,4700.0,2020-09-05,ativo
+6,Juliana Pinto,CE,Nordeste,4500.0,2022-01-18,ativo
+7,Rodrigo Cunha,GO,Centro-Oeste,4650.0,2019-07-22,ativo
+8,Tatiane Rocha,AM,Norte,4550.0,2021-05-30,inativo
